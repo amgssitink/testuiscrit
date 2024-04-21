@@ -25,11 +25,6 @@ function library:CreateWindow(name, version, icon)
 	local Minimize = Instance.new("ImageButton")
 	local _4pxShadow2px_2 = Instance.new("ImageLabel")
 
-    local ScreenGui = Instance.new("ScreenGui")
-local ImageButton = Instance.new("ImageButton")
-local UICorner = Instance.new("UICorner")
-local UIStroke = Instance.new("UIStroke")
-
 	local RandomString = ""
 	for i = 1, math.random(3,20) do
 		RandomString = RandomString..string.char(math.random(97,122))
