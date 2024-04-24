@@ -15,7 +15,7 @@ local oldcolor = {
     ["Border Color"] = Color3.fromRGB(131, 181, 255),
     ["Click Effect Color"] = Color3.fromRGB(230, 230, 230),
     ["Setting Icon Color"] = Color3.fromRGB(230, 230, 230),
-    ["Logo Image"] = "rbxassetid://17262970134",
+    ["Logo Image"] = "rbxassetid://6248942117",
     ["Search Icon Color"] = Color3.fromRGB(255, 255, 255),
     ["Search Icon Highlight Color"] = Color3.fromRGB(131, 181, 255),
     ["GUI Text Color"] = Color3.fromRGB(230, 230, 230),
@@ -50,7 +50,7 @@ local b = {
     ["Border Color"] = Color3.fromRGB(255,255,255),
     ["Click Effect Color"] = Color3.fromRGB(230, 230, 230),
     ["Setting Icon Color"] = Color3.fromRGB(230, 230, 230),
-    ["Logo Image"] = "rbxassetid://17262970134",
+    ["Logo Image"] = "rbxassetid://6248942117",
     ["Search Icon Color"] = Color3.fromRGB(255, 255, 255),
     ["Search Icon Highlight Color"] = Color3.fromRGB(142, 172, 255),
     ["GUI Text Color"] = Color3.fromRGB(70, 70, 70),
@@ -123,20 +123,20 @@ local j = game:GetService("HttpService")
 local k = "!CustomUI.json"
 function SaveCustomUISettings()
     local j = game:GetService("HttpService")
-    if not isfolder("Blade Hub") then
-        makefolder("Blade Hub")
+    if not isfolder("Sea Hub") then
+        makefolder("Sea Hub")
     end
-    writefile("Blade Hub/" .. k, j:JSONEncode(CorrectTable(e)))
+    writefile("Sea Hub/" .. k, j:JSONEncode(CorrectTable(e)))
 end
 function ReadCustomUISetting()
     local l, m =
         pcall(
         function()
             local j = game:GetService("HttpService")
-            if not isfolder("Blade Hub") then
+            if not isfolder("Sea Hub") then
                 makefolder("Sea Hub")
             end
-            local n = j:JSONDecode(readfile("Blade Hub/" .. k))
+            local n = j:JSONDecode(readfile("Sea Hub/" .. k))
             for d, v in pairs(n) do
                 local function o()
                     if v.Color == nil then
@@ -288,7 +288,7 @@ spawn(
 )
 u.NotiGui = Instance.new("ScreenGui")
 u.NotiGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-u.NotiGui.Name = "Blade Hub Notification"
+u.NotiGui.Name = "Sea Hub Notification"
 local F = Instance.new("Frame")
 local G = Instance.new("UIListLayout")
 F.Name = "NotiContainer"
@@ -683,7 +683,7 @@ function t.CreateNoti(H)
     S.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
     S.BackgroundTransparency = 1.000
     S.Size = UDim2.new(1, 0, 1, 0)
-    S.Image = "rbxassetid://17262970134"
+    S.Image = "rbxassetid://3926305904"
     S.ImageRectOffset = Vector2.new(284, 4)
     S.ImageRectSize = Vector2.new(24, 24)
     S.ImageColor3 = getgenv().UIColor["Search Icon Color"]
@@ -768,7 +768,7 @@ function t.CreateNoti(H)
     )
 end
 function t.CreateMain(H)
-    local Z = tostring(H.Title) or "Blade Hub"
+    local Z = tostring(H.Title) or "Sea Hub"
     getgenv().MainDesc = H.Desc or ""
     local _ = false
     cac = false
@@ -880,7 +880,7 @@ function t.CreateMain(H)
                 local W = tostring(u.Getcolor(getgenv().UIColor["Title Text Color"])[2])
                 local X = tostring(u.Getcolor(getgenv().UIColor["Title Text Color"])[3])
                 local g = V .. "," .. W .. "," .. X
-                ad.Text = '<font color="rgb(' .. g .. ')">Blade Hub</font> ' .. getgenv().MainDesc
+                ad.Text = '<font color="rgb(' .. g .. ')">Sea Hub</font> ' .. getgenv().MainDesc
             end
         )
         local as
@@ -941,7 +941,7 @@ function t.CreateMain(H)
     local W = tostring(u.Getcolor(getgenv().UIColor["Title Text Color"])[2])
     local X = tostring(u.Getcolor(getgenv().UIColor["Title Text Color"])[3])
     local g = V .. "," .. W .. "," .. X
-    ad.Text = '<font color="rgb(' .. g .. ')">Blade Hub</font> ' .. getgenv().MainDesc
+    ad.Text = '<font color="rgb(' .. g .. ')">Sea Hub</font> ' .. getgenv().MainDesc
     table.insert(
         c["Title Text Color"],
         function()
@@ -950,7 +950,7 @@ function t.CreateMain(H)
             local W = tostring(u.Getcolor(getgenv().UIColor["Title Text Color"])[2])
             local X = tostring(u.Getcolor(getgenv().UIColor["Title Text Color"])[3])
             local g = V .. "," .. W .. "," .. X
-            ad.Text = '<font color="rgb(' .. g .. ')">Vlsde Hub</font> ' .. getgenv().MainDesc
+            ad.Text = '<font color="rgb(' .. g .. ')">Sea Hub</font> ' .. getgenv().MainDesc
         end
     )
     local ar
@@ -13805,7 +13805,7 @@ for k,v in pairs(SpawnTable) do
                                 }
                             },
                             author = {
-                                name = "ui"
+                                name = "Sea Hub Bee Swarm Simulator Bug Reporter"
                             }
                         }
                     }
